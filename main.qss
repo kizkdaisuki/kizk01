@@ -1,0 +1,149 @@
+#widget_register {
+  /* border: 3px solid lightskyblue; */
+  border-radius: 10px;
+  background-color: white;
+}
+#widget_login {
+  /* border: 3px solid lightskyblue; */
+  border-radius: 8px;
+  background-color: white;
+}
+#widget_3 {
+  background-color: #b569ff;
+}
+#widget_register_top {
+  background-color: #b569ff;
+  border-top-left-radius: 10px; /* 左上角 */
+  border-top-right-radius: 10 px; /* 右下角 */
+}
+
+#label_16 {
+  /* background-color: lightsteelblue; */
+  /* border: 2px solid lightskyblue; */
+  background-color: white;
+  border-radius: 37px;
+}
+
+#label_register_wel {
+  border-image: url(:/images/image/images/wel.png);
+}
+
+#label_register_welcome {
+  border-image: url(:/images/image/images/welcome.png);
+}
+#label_login_title {
+  border-image: url(:/images/image/images/title.png);
+}
+
+#label_headphoto {
+  border-radius: 35px;
+  border-image: url(:/images/image/images/head_photo/y10.jpg);
+  /* background-size: 10% 10%; */
+  background-position: center;
+}
+
+#widget_register_effect {
+  border: 1px solid lightblue;
+  border-radius: 20px;
+  background-color: white;
+}
+
+#label_login_register,
+#label_register_login {
+  color: #a6a6a6;
+  text-decoration: underline;
+  font-weight: 400;
+}
+#label_login_register:hover,
+#label_register_login:hover {
+  color: #949494;
+  text-decoration: underline;
+  font-weight: 400;
+}
+MainWindow QLineEdit {
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(52, 50, 50);
+}
+
+MainWindow QLineEdit:hover {
+  border-bottom: 1px solid rgb(193, 193, 193);
+}
+
+MainWindow QLineEdit:focus {
+  border-bottom: 1px solid rgb(18, 183, 245);
+}
+
+#widget_sub_userinfo QLineEdit {
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  border: 1px solid rgb(52, 50, 50);
+}
+#widget_sub_userinfo QLineEdit:hover {
+  border: 1px solid rgb(193, 193, 193);
+}
+
+#widget_sub_userinfo QLineEdit:focus {
+  border: 1px solid rgb(18, 183, 245);
+}
+
+#pushButton_login,
+#pushButton_register {
+  background-color: #07bdfd;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+}
+
+#pushButton_login:hover,
+#pushButton_register:hover {
+  background-color: #22cbff;
+}
+#widget_login,
+#widget_3 {
+  border-top-left-radius: 5px; /* 左上角 */
+  border-top-right-radius: 5px; /* 右下角 */
+}
+#pushButton_login_min,
+#pushButton_login_min_2 {
+  border-radius: 0px;
+  background-image: url(:/images/image/images/min.png);
+  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  border: none;
+  background-position: center center;
+  /* margin-bottom: 10px; */
+}
+#pushButton_login_quit,
+#pushButton_login_quit_2 {
+  border-radius: 0px;
+  background-image: url(:/images/image/images/quit.png);
+  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  border: none;
+  background-position: center center;
+}
+#pushButton_login_min:hover,
+#pushButton_login_min_2:hover {
+  background-color: rgb(255, 255, 255, 100);
+}
+#pushButton_login_quit:hover,
+#pushButton_login_quit_2:hover {
+  background-color: rgba(230, 0, 0, 0.5);
+}
+#pushButton_login_min:pressed,
+#pushButton_login_quit:pressed,
+#pushButton_login_min_2:pressed,
+#pushButton_login_quit_2:pressed {
+  background-color: rgba(95, 95, 95, 100);
+  border-color: rgba(255, 255, 255, 30);
+  border-style: inset;
+  color: rgba(0, 0, 0, 100);
+}
+
+#widget_sub_userinfo {
+  border: 3px solid lightskyblue;
+  border-radius: 10px;
+}

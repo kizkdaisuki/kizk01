@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qss</file>
+        <file>first/BendedLine.mat</file>
+        <file>first/CShape.mat</file>
+        <file>first/DoubleBendedLine.mat</file>
+        <file>first/GShape.mat</file>
+        <file>first/JShape.mat</file>
+        <file>first/Khamesh.mat</file>
+        <file>first/Leaf_1.mat</file>
+        <file>first/Multi_Models_1.mat</file>
+        <file>first/NShape.mat</file>
+        <file>first/PShape.mat</file>
+        <file>first/readme.docx</file>
+        <file>first/Sine.mat</file>
+        <file>first/Zshape.mat</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>image/images/min.png</file>
+        <file>image/images/quit.png</file>
+        <file>image/images/head_photo/y10.jpg</file>
+        <file>image/images/wel.png</file>
+        <file>image/images/welcome.png</file>
+        <file>image/images/title.png</file>
+    </qresource>
+</RCC>
