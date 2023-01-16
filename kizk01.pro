@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     data.cpp \
     dataprocess.cpp \
+    graphshow.cpp \
     main.cpp \
     mainwindow.cpp \
     people.cpp \
@@ -26,11 +27,13 @@ SOURCES += \
 HEADERS += \
     data.h \
     dataprocess.h \
+    graphshow.h \
     mainwindow.h \
     people.h \
     subwindow.h
 
 FORMS += \
+    graphshow.ui \
     mainwindow.ui \
     subwindow.ui
 

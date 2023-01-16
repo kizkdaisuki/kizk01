@@ -6,6 +6,7 @@
 #include <QString>
 #include <vector>
 #include <iostream>
+#include "graphshow.h"
 using namespace std;
 
 class Data
@@ -21,8 +22,7 @@ private:
     vector<double> m_v_time;
     vector<vector<double>> m_v_vel;
     vector<vector<double>> m_v_acc;
-    double m_v_dt;
-
+    double m_v_dt = 0;
 };
 
 #endif // DATA_H

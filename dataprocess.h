@@ -13,6 +13,7 @@
 #include <iostream>
 #include "data.h"
 #include <vector>
+#include "graphshow.h"
 using namespace std;
 
 
@@ -28,6 +29,7 @@ public:
 public:
     vector<Data*> m_v_data;
     vector<QString> m_v_filepath;
+    GraphShow* m_graphshow_graph = NULL;
 };
 
 #endif // DATAPROCESS_H

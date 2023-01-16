@@ -23,7 +23,7 @@
 #include <QSettings>
 #include <QByteArray>
 #include "dataprocess.h"
-
+#include "graphshow.h"
 using std::vector;
 using std::set;
 using std::map;

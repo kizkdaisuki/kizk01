@@ -9,7 +9,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     this->statusBar()->setSizeGripEnabled(false);//隐藏状态栏上的拖动图标
     this->setWindowTitle("手部康复辅助系统");
     this->setFixedSize(1280, 720);
@@ -38,7 +37,6 @@ MainWindow::MainWindow(QWidget *parent)
 //    effect->setColor(QColor(68, 68, 68));
 //    effect->setBlurRadius(10);
     DataProcess* t = new DataProcess();
-
 
 }
 
