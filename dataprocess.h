@@ -11,7 +11,9 @@
 #include<QFile>
 #include <QMessageBox>
 #include <iostream>
-
+#include "data.h"
+#include <vector>
+using namespace std;
 
 
 class DataProcess
@@ -21,6 +23,11 @@ public:
 
 public:
     void test();
+    void initFilePath(); // 初始化文件路径
+    void saveData(QString filePath); // 保存数据
+public:
+    vector<Data*> m_v_data;
+    vector<QString> m_v_filepath;
 };
 
 #endif // DATAPROCESS_H
