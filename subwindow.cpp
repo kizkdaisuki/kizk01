@@ -3,7 +3,7 @@
 #endif
 #include "subwindow.h"
 #include "ui_subwindow.h"
-
+#include <QFile>
 SubWindow::SubWindow(set<QString> set, People* p, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::SubWindow)
@@ -99,6 +99,19 @@ void SubWindow::allTimerConnects()
         qDebug() << "click backButton";
         emit this->sendClickBackButton();
     });
+}
+
+void SubWindow::initStyle()
+{
+    QString qss;
+    QFile file(":/qss/blacksoft.css");
+    if (file.open(QFile::ReadOnly)) {
+        qss = QLatin1String(file.readAll());
+        QString paletteColor = qss.mid(20, 7);
+        this->setPalette(QPalette(paletteColor));
+        this->setStyleSheet(qss);
+        file.close();
+    }
 }
 
 void SubWindow::on_pushButton_sub_userinfo_clicked()

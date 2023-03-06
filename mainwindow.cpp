@@ -133,15 +133,16 @@ void MainWindow::allButtonConnects()
         if(checkCorrect(username, password))
         {
             this->hide();
-            this->m_sub_window = new SubWindow(this->m_set_hashmap_for_username, this->m_v_p[this->m_map_hashmap_username_to_id[username]]);
-
-            this->subRenderConnects();
-            this->m_sub_window->show();
+            this->m_frm_window = new frmMain();
+            this->m_frm_window->show();
             return;
+//            this->m_sub_window = new SubWindow(this->m_set_hashmap_for_username, this->m_v_p[this->m_map_hashmap_username_to_id[username]]);
+//            this->subRenderConnects();
+//            this->m_sub_window->show();
         }
         else
         {
-            this->setLoginMessage(this->m_s_errorMessage_login, 0);
+//            this->setLoginMessage(this->m_s_errorMessage_login, 0);
             this->m_timer_t2->start(2000);
         }
     });

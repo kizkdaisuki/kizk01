@@ -33,6 +33,7 @@ public:
     void allConnects();
     void allButtonConnects();
     void allTimerConnects();
+    void initStyle();
 signals:
     void sendClickBackButton();
     void sendUpdateUserInfo();

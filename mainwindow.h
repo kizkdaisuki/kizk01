@@ -24,6 +24,7 @@
 #include <QByteArray>
 #include "dataprocess.h"
 #include "graphshow.h"
+#include "./form/frmmain.h"
 using std::vector;
 using std::set;
 using std::map;
@@ -82,7 +83,7 @@ private:
     Ui::MainWindow *ui;
     vector<People*> m_v_p;
     SubWindow* m_sub_window = NULL;
-
+    frmMain* m_frm_window = NULL;
     map<QString, int> m_map_hashmap_username_to_id;
     QString m_s_errorMessage_login;
     QString m_s_errorMessage_register;
