@@ -82,6 +82,7 @@ void DataProcess::saveData(QString filePath)
     for(int i = 0; i < m; i ++)
         t.push_back(data[i]);
     matClose(pmatFile);
+
     Data* newData = new Data(pos, t);
     this->m_v_data.push_back(newData);
 }

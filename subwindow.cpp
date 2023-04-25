@@ -9,6 +9,7 @@ SubWindow::SubWindow(set<QString> set, People* p, QWidget *parent) :
     ui(new Ui::SubWindow)
 {
     ui->setupUi(this);
+    this->initStyle();
     this->m_People_p = new People(p);
     this->m_People_p->printPeople();
     this->setFixedSize(1280, 720);

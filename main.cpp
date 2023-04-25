@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
     w.setStyleSheet(qss);
-    frmMain k;
-    k.show();
+//    frmMain k;
+//    k.show();
     return a.exec();
 }

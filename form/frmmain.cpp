@@ -5,13 +5,15 @@
 #include "./core_base/iconhelper.h"
 #include "./core_base/quihelper.h"
 
-frmMain::frmMain(QWidget *parent) : QWidget(parent), ui(new Ui::frmMain)
+frmMain::frmMain(SubWindow* sub, QWidget *parent) : QWidget(parent), ui(new Ui::frmMain)
 {
     ui->setupUi(this);
     this->initForm();
     this->initStyle();
     this->initLeftMain();
     this->initLeftConfig();
+    this->m_sub_window = sub;
+
 }
 
 frmMain::~frmMain()
@@ -71,7 +73,7 @@ void frmMain::initForm()
     QFont font;
     font.setPixelSize(25);
     ui->labTitle->setFont(font);
-    ui->labTitle->setText("智能访客管理平台");
+    ui->labTitle->setText("手部康复辅助系统");
     this->setWindowTitle(ui->labTitle->text());
 
     ui->stackedWidget->setStyleSheet("QLabel{font:60px;}");
@@ -135,9 +137,9 @@ void frmMain::buttonClick()
         ui->stackedWidget->setCurrentIndex(0);
     } else if (name == "系统设置") {
         ui->stackedWidget->setCurrentIndex(1);
-    } else if (name == "警情查询") {
+    } else if (name == "主动模式") {
         ui->stackedWidget->setCurrentIndex(2);
-    } else if (name == "调试帮助") {
+    } else if (name == "被动模式") {
         ui->stackedWidget->setCurrentIndex(3);
     } else if (name == "用户退出") {
         exit(0);
@@ -171,8 +173,8 @@ void frmMain::initLeftMain()
 
 void frmMain::initLeftConfig()
 {
-    iconsConfig << 0xf031 << 0xf036 << 0xf249 << 0xf055 << 0xf05a << 0xf249;
-    btnsConfig << ui->tbtnConfig1 << ui->tbtnConfig2 << ui->tbtnConfig3 << ui->tbtnConfig4 << ui->tbtnConfig5 << ui->tbtnConfig6;
+    iconsConfig << 0xf031 << 0xf036 << 0xf249 << 0xf05a << 0xf249;
+    btnsConfig << ui->tbtnConfig1 << ui->tbtnConfig2 << ui->tbtnConfig3 << ui->tbtnConfig5 << ui->tbtnConfig6;
 
     int count = btnsConfig.count();
     for (int i = 0; i < count; ++i) {
@@ -194,18 +196,43 @@ void frmMain::initLeftConfig()
     ui->tbtnConfig1->click();
 }
 
-void frmMain::leftMainClick()
+void frmMain::leftMainClick() // render the Main button click
 {
     QAbstractButton *b = (QAbstractButton *)sender();
-    QString name = b->text();
+    QString name = b->text(); // get the name of the leftMainClick
 
-    int count = btnsMain.count();
+    int count = btnsMain.count(); // check the count of the button
+    int idx = -1;
+    qDebug() << "count = " << count;
     for (int i = 0; i < count; ++i) {
         QAbstractButton *btn = btnsMain.at(i);
         btn->setChecked(btn == b);
     }
+    if(this->m_layout_main == NULL) this->m_layout_main = new QVBoxLayout;
+    if(b == ui->tbtnMain1)
+    {
 
-    ui->lab1->setText(name);
+
+        this->m_layout_main->removeWidget(ui->pushButton_2);
+        ui->pushButton_2->hide();
+        this->m_layout_main->addWidget(ui->graphicsView);
+        ui->widgetMainWidget->setLayout(this->m_layout_main);
+        ui->graphicsView->show();
+    }
+    else
+    {
+
+        this->m_layout_main->removeWidget(ui->graphicsView);
+        this->m_layout_main->addWidget(ui->pushButton_2);
+        ui->graphicsView->hide();
+        ui->pushButton_2->show();
+//        delete ui->graphicsView;
+//        ui->widgetMainWidget->setLayout(layout);
+    }
+   //        ui->widgeMainWidget = ui->widgeMainwidge_1, qDebug() << "into idx = 0";
+    // if i == 0 insert graph
+//    ui->lab1->setText(name);
+
 }
 
 void frmMain::leftConfigClick()

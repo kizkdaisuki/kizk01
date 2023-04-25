@@ -5,7 +5,11 @@
 #define FRMMAIN_H
 
 #include <QWidget>
-
+#include "subwindow.h"
+#include "data.h"
+#include "graphshow.h"
+#include "QLayout"
+#include "QVBoxLayout"
 class QAbstractButton;
 
 namespace Ui {
@@ -17,7 +21,7 @@ class frmMain : public QWidget
     Q_OBJECT
 
 public:
-    explicit frmMain(QWidget *parent = 0);
+    explicit frmMain(SubWindow* sub, QWidget *parent = 0);
     ~frmMain();
 
 protected:
@@ -31,7 +35,10 @@ private:
 
     QList<int> iconsConfig;
     QList<QAbstractButton *> btnsConfig;
+    QVBoxLayout* m_layout_main = NULL;
 
+public:
+    SubWindow* m_sub_window = NULL;
 private:
     //根据QSS样式获取对应颜色值
     QString borderColor;
@@ -39,13 +46,13 @@ private:
     QString darkBgColor;
     QString normalTextColor;
     QString darkTextColor;
-
     void getQssColor(const QString &qss, const QString &flag, QString &color);
     void getQssColor(const QString &qss, QString &textColor,
                      QString &panelColor, QString &borderColor,
                      QString &normalColorStart, QString &normalColorEnd,
                      QString &darkColorStart, QString &darkColorEnd,
                      QString &highColor);
+
 
 private slots:
     void initForm();

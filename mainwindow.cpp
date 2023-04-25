@@ -36,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
 //    effect->setOffset(0, 0);
 //    effect->setColor(QColor(68, 68, 68));
 //    effect->setBlurRadius(10);
-    DataProcess* t = new DataProcess();
+//    DataProcess* t = new DataProcess();
 
 }
 
@@ -133,7 +133,12 @@ void MainWindow::allButtonConnects()
         if(checkCorrect(username, password))
         {
             this->hide();
-            this->m_frm_window = new frmMain();
+//            this->m_frm_window = new frmMain();
+//            this->m_frm_window->show();
+            this->m_sub_window = new SubWindow(this->m_set_hashmap_for_username, this->m_v_p[this->m_map_hashmap_username_to_id[username]]);
+            this->subRenderConnects();
+//            this->m_sub_window->show();
+            this->m_frm_window = new frmMain(this->m_sub_window);
             this->m_frm_window->show();
             return;
 //            this->m_sub_window = new SubWindow(this->m_set_hashmap_for_username, this->m_v_p[this->m_map_hashmap_username_to_id[username]]);

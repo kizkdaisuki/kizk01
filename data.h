@@ -6,6 +6,7 @@
 #include <QString>
 #include <vector>
 #include <iostream>
+#include <time.h>
 #include "graphshow.h"
 using namespace std;
 

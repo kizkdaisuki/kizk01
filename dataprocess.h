@@ -14,6 +14,7 @@
 #include "data.h"
 #include <vector>
 #include "graphshow.h"
+#include <time.h>
 using namespace std;
 
 
